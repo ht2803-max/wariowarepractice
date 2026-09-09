@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cutgqsd2260lt"]
 
+[ext_resource type="Texture2D" uid="uid://bwcnnf4pn7efw" path="res://ufo.png" id="1_1wvtj"]
 [ext_resource type="Script" uid="uid://dui2lyy2s8xy3" path="res://WaveLevel1.gd" id="1_3mivm"]
 [ext_resource type="Script" uid="uid://70x5nyou1o1b" path="res://UFOLevel1.gd" id="1_disr2"]
 [ext_resource type="Script" uid="uid://bdpxk6ieoo1x8" path="res://WaveLevel2.gd" id="2_lwxgr"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://drv03q248ysba" path="res://cube1.png" id="4_weph3"]
 [ext_resource type="Script" uid="uid://cl6e6ayesmsj5" path="res://CubeLevel2.gd" id="5_1kfvg"]
 [ext_resource type="Script" uid="uid://bp4bmdm2a4ol0" path="res://CubeLevel3.gd" id="6_njjl4"]
+[ext_resource type="Texture2D" uid="uid://h1lbknvrrjpd" path="res://wave.png" id="9_1kfvg"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rnwba"]
 
@@ -24,17 +26,18 @@ texture = SubResource("CanvasTexture_rnwba")
 
 [node name="Levels Completed" type="TextEdit" parent="TextureRect" unique_id=1883387948]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 615.0
-offset_right = 726.0
-offset_bottom = 674.0
+offset_left = 352.0
+offset_top = 591.0
+offset_right = 670.0
+offset_bottom = 650.0
 text = "Levels Completed: "
 
 [node name="UFO" type="TextEdit" parent="." unique_id=522376384]
 offset_left = 771.0
-offset_top = 28.0
+offset_top = 114.0
 offset_right = 1106.0
-offset_bottom = 162.0
+offset_bottom = 252.0
+theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 20
 text = "UFO Challenges
 A UFO is a type of character that
@@ -42,13 +45,19 @@ relies on 1 input but acts kind of
 like a flappy bird"
 placeholder_text = "lol
 "
+editable = false
+
+[node name="Ufo" type="Sprite2D" parent="UFO" unique_id=858670276]
+position = Vector2(168, 319)
+scale = Vector2(0.5203125, 0.75520825)
+texture = ExtResource("1_1wvtj")
 
 [node name="UFO Box" type="HBoxContainer" parent="UFO" unique_id=993484053]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 136.0
-offset_right = 258.0
-offset_bottom = 512.0
+offset_left = 58.0
+offset_top = 142.0
+offset_right = 252.0
+offset_bottom = 394.0
 
 [node name="Level 1" type="Button" parent="UFO/UFO Box" unique_id=1126996925]
 layout_mode = 2
@@ -66,10 +75,11 @@ text = "Level 3"
 script = ExtResource("3_rwyrp")
 
 [node name="Cube" type="TextEdit" parent="." unique_id=477469406]
-offset_left = 389.0
-offset_top = 69.0
-offset_right = 724.0
-offset_bottom = 201.0
+offset_left = 374.0
+offset_top = 106.0
+offset_right = 709.0
+offset_bottom = 233.0
+theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 20
 text = "Cube Challenges
 A cube is a type of character that
@@ -77,6 +87,7 @@ simply jumps based off of its
 input"
 placeholder_text = "lol
 "
+editable = false
 
 [node name="Cube1" type="Sprite2D" parent="Cube" unique_id=375845889]
 position = Vector2(174, 310.4375)
@@ -86,9 +97,9 @@ texture = ExtResource("4_weph3")
 [node name="Cube Box" type="HBoxContainer" parent="Cube" unique_id=420298170]
 layout_mode = 0
 offset_left = 61.0
-offset_top = 192.0
+offset_top = 153.0
 offset_right = 256.0
-offset_bottom = 455.0
+offset_bottom = 410.0
 
 [node name="Level 1" type="Button" parent="Cube/Cube Box" unique_id=1640875915]
 layout_mode = 2
@@ -110,12 +121,20 @@ offset_left = 16.0
 offset_top = 134.0
 offset_right = 351.0
 offset_bottom = 239.0
+theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 20
 text = "Wave Challenges
 A Wave is a type of character that
  moves 44.9 degrees up or down"
 placeholder_text = "lol
 "
+editable = false
+virtual_keyboard_enabled = false
+
+[node name="Wave2" type="Sprite2D" parent="Wave" unique_id=1523670591]
+position = Vector2(194, 286)
+scale = Vector2(0.51171875, 0.6239583)
+texture = ExtResource("9_1kfvg")
 
 [node name="WaveBox" type="HBoxContainer" parent="Wave" unique_id=1814232381]
 layout_mode = 0

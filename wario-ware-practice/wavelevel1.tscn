@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cfwe846f2kttp"]
+
+[ext_resource type="Script" uid="uid://bscn4nk8ishxf" path="res://character_body_2d.gd" id="1_7tsv1"]
+[ext_resource type="Texture2D" uid="uid://h1lbknvrrjpd" path="res://wave.png" id="1_naxhd"]
+[ext_resource type="Texture2D" uid="uid://brenevgdkykbu" path="res://white-screen-image-3840x2160.png" id="3_rpqbp"]
+
+[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_rnwba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ehbd"]
+size = Vector2(200.59744, 115.86212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr6cw"]
+size = Vector2(3796.362, 2178.9478)
+
+[node name="WaveLevel1" type="Node2D" unique_id=1435580087]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=666929582]
+offset_left = 62.0
+offset_top = 202.0
+offset_right = 4440.0
+offset_bottom = 682.0
+texture = SubResource("DrawableTexture2D_rnwba")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=495558171]
+script = ExtResource("1_7tsv1")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=628342073]
+position = Vector2(162, 409.99997)
+scale = Vector2(0.104687504, 0.12083336)
+texture = ExtResource("1_naxhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D" unique_id=650755976]
+position = Vector2(-47.76114, 66.207245)
+scale = Vector2(1, 1.0000007)
+shape = SubResource("RectangleShape2D_8ehbd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1017453037]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=4947417]
+position = Vector2(162, 483)
+scale = Vector2(0.03437501, 0.026388884)
+texture = ExtResource("3_rpqbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Sprite2D" unique_id=476696870]
+position = Vector2(0.00014305115, -37.89441)
+shape = SubResource("RectangleShape2D_dr6cw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Sprite2D/CollisionShape2D" unique_id=164844995]
+position = Vector2(3287.272, -871.5788)
+shape = SubResource("RectangleShape2D_dr6cw")
