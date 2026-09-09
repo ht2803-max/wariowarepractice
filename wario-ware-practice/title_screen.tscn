@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://t4f2ya3i6aif"]
 
-[ext_resource type="Texture2D" uid="uid://bikosqcpjw6b5" path="res://icon.svg" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://cuisni6m1o61w" path="res://titlescreen.png" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://durg0y6lsm3b" path="res://start.gd" id="2_05l2w"]
 [ext_resource type="Script" uid="uid://dvtk34scsc8uv" path="res://quit.gd" id="2_ak2if"]
 [ext_resource type="Script" uid="uid://b34csdlxfmbm5" path="res://settings.gd" id="3_hafda"]
@@ -13,7 +13,11 @@ offset_left = 3.0
 offset_top = -2.0
 offset_right = 1154.0
 offset_bottom = 644.0
-texture = ExtResource("1_v6p8y")
+
+[node name="NewProject(7)" type="Sprite2D" parent="TextureRect" unique_id=418933746]
+position = Vector2(571.74994, 324)
+scale = Vector2(0.8949219, 0.88611114)
+texture = ExtResource("1_05l2w")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=370178024]
 clip_contents = false
